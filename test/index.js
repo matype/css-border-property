@@ -8,6 +8,13 @@ test('parse', function (t) {
   t.end()
 })
 
+test('parse', function (t) {
+  var actual = border.parse('thin solid #eee')
+  var expected = [ { width: 'thin' }, { style: 'solid' }, { color: '#eee' } ]
+  t.same(actual, expected)
+  t.end()
+})
+
 test('stringify', function (t) {
   var actual = border.stringify([
     {width: '1px'},

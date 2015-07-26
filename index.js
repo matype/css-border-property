@@ -2,9 +2,13 @@ var isColor = require('is-color')
 var isLength = require('is-css-length')
 var isStyle = require('is-border-style')
 
+function isWidth (str) {
+  return isLength(str) || str === 'thin' || str === 'medium' || str === 'thick'
+}
+
 function check (val) {
   if (isColor(val)) return 'color'
-  if (isLength(val) || 'thin' || 'medium' || 'thick') return 'width'
+  if (isWidth(val)) return 'width'
   if (isStyle(val)) return 'style'
 
   return null
