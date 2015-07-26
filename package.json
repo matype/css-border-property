@@ -1,0 +1,19 @@
+{
+  "name": "css-border-property",
+  "version": "0.0.1",
+  "description": "Parser and Stringifier of `border` property",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/morishitter/css-border-property/git"
+  },
+  "keywords": ["css","property","parser","stringify","border"],
+  "author": "Masaaki Morishita",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+  }
+}
