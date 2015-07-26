@@ -4,7 +4,7 @@ var isStyle = require('is-border-style')
 
 function check (val) {
   if (isColor(val)) return 'color'
-  if (isLength(val)) return 'width'
+  if (isLength(val) || 'thin' || 'medium' || 'thick') return 'width'
   if (isStyle(val)) return 'style'
 
   return null
