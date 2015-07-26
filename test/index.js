@@ -2,15 +2,19 @@ var test = require('tape')
 var border = require('..')
 
 test('description', function (t) {
-  border.parse('1px solid #eee')
+  var actual = border.parse('1px solid #eee')
+  var expected = [ { width: '1px' }, { style: 'solid' }, { color: '#eee' } ]
+  t.same(actual, expected)
   t.end()
 })
 
 test('description', function (t) {
-  border.stringify([
+  var actual = border.stringify([
     {width: '1px'},
     {style: 'solid'},
     {color: '#fff'},
   ])
+  var expected = '1px solid #fff'
+  t.same(actual, expected)
   t.end()
 })
