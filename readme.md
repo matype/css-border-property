@@ -20,12 +20,17 @@ border.parse('1px solid #eee')
   { style: 'solid' },
   { color: '#eee' }
 ]
+[
+  { property: 'border-width', value: '1px' },
+  { property: 'border-style', value: 'solid' },
+  { property: 'border-color', value: '#eee' }
+]
 */
 
 border.stringify([
-    {width: '1px'},
-    {style: 'solid'},
-    {color: '#fff'},
+  { property: 'border-width', value: '1px' },
+  { property: 'border-style', value: 'solid' },
+  { property: 'border-color', value: '#eee' }
 ])
 /* '1px solid #fff' */
 ```
