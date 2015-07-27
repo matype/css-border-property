@@ -16,11 +16,6 @@ var border = require('css-border-property')
 border.parse('1px solid #eee')
 /*
 [
-  { width: '1px' },
-  { style: 'solid' },
-  { color: '#eee' }
-]
-[
   { property: 'border-width', value: '1px' },
   { property: 'border-style', value: 'solid' },
   { property: 'border-color', value: '#eee' }
