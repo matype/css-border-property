@@ -24,9 +24,6 @@ test('keyword width', function (t) {
 
 test('stringify', function (t) {
   var actual = border.stringify([
-    {width: '1px'},
-    {style: 'solid'},
-    {color: '#fff'},
     { property: 'border-width', value: '1px' },
     { property: 'border-style', value: 'solid' },
     { property: 'border-color', value: '#fff' },
@@ -42,6 +39,14 @@ test('stringify', function (t) {
     { property: 'border-style', value: 'solid' },
   ])
   var expected = '1px solid'
+  t.same(actual, expected)
+  t.end()
+})
+
+test('stringify', function (t) {
+  var parsed = border.parse('1px solid #eee')
+  var actual = border.stringify(parsed)
+  var expected = '1px solid #eee'
   t.same(actual, expected)
   t.end()
 })
