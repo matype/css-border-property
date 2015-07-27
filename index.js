@@ -21,7 +21,8 @@ module.exports.parse = function (str) {
     var prop = check(v)
     if (prop) {
       var obj = {}
-      obj[prop] = v
+      obj.property = 'border-' + prop
+      obj.value = v
       ret.push(obj)
     }
   })
@@ -30,9 +31,9 @@ module.exports.parse = function (str) {
 
 module.exports.stringify = function (arr) {
   var prop = []
-  arr.forEach(function (val) {
-    Object.keys(val).forEach(function (key) {
-      prop.push(val[key])
+  arr.forEach(function (obj) {
+    Object.keys(obj).forEach(function (key) {
+      if (key === 'value') prop.push(obj[key])
     })
   })
   return prop.join(' ')
