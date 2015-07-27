@@ -1,3 +1,7 @@
+## v1.1.0
+
+- Change return data structure.
+
 ## v1.0.0
 
 Major release.
